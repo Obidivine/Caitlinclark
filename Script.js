@@ -1,8 +1,11 @@
-const cartItems = [
-  { name: "Caitlin Clark Tee - White", price: 25 },
-  { name: "Caitlin Clark Tee - Black", price: 30 },
-];
+let cart = [];
 
-document.getElementById('order-summary').value = cartItems
-  .map(item => `${item.name} - $${item.price}`)
-  .join('\n');
+function addToCart(itemName, itemPrice) {
+  cart.push({ name: itemName, price: itemPrice });
+  alert(`${itemName} added to cart!`);
+}
+
+function goToCheckout() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "checkout.html";
+}

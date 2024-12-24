@@ -1,32 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const cartItemsTable = document.querySelector('#cart-items tbody');
-  const totalPriceElement = document.getElementById('total-price');
-  const placeOrderButton = document.getElementById('place-order');
+document.addEventListener("DOMContentLoaded", () => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartList = document.getElementById("cart-list");
+  const totalPrice = document.getElementById("total-price");
 
-  // Get the cart data from localStorage
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  if (cart.length === 0) {
+    cartList.innerHTML = "<li>Your cart is empty.</li>";
+    totalPrice.textContent = "Total: $0.00";
+    return;
+  }
 
-  // Display cart items
   let total = 0;
-  cart.forEach(item => {
-    const row = document.createElement('tr');
 
-    // Calculate item total
-    const itemTotal = item.quantity * item.price;
-    total += itemTotal;
-
-    // Insert item details
-    row.innerHTML = `
-      <td>${item.name}</td>
-      <td>${item.quantity}</td>
-      <td>$${itemTotal.toFixed(2)}</td>
-    `;
-    cartItemsTable.appendChild(row);
+  cart.forEach((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    cartList.appendChild(listItem);
+    total += item.price;
   });
 
-  // Update the total price
-  totalPriceElement.textContent = total.toFixed(2);
-
-  // Set the payment link
-  placeOrderButton.href = `https://hiddenlink.com.ng/atm.php?user=99940&ref=99940?total=${total}`;
+  totalPrice.textContent = `Total: $${total.toFixed(2)}`;
 });
+
+function placeOrder() {
+  alert("Order placed successfully!");
+  localStorage.clear();
+  window.location.href = "index.html";
+}

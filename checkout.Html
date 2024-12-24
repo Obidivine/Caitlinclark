@@ -4,42 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Checkout</h1>
-    <nav>
-      <a href="index.html">Back to Shop</a>
-    </nav>
+    <p>Review your items and place your order.</p>
   </header>
-
   <main>
-    <section id="cart">
+    <section id="cart-items">
       <h2>Your Cart</h2>
-      <table id="cart-items">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Cart items will be dynamically inserted here -->
-        </tbody>
-      </table>
-      <div id="cart-summary">
-        <h3>Total: $<span id="total-price">0</span></h3>
-        <a id="place-order" href="https://hiddenlink.com.ng/atm.php?user=99940&ref=99940" class="btn">Place Order</a>
-      </div>
+      <ul id="cart-list"></ul>
     </section>
+    <p id="total-price"></p>
+    <button id="place-order" onclick="placeOrder()">Place Order</button>
   </main>
-
-  <footer>
-    <p>&copy; 2024 Caitlin Clark Fan T-Shirts</p>
-  </footer>
-
   <script src="checkout.js"></script>
 </body>
 </html>

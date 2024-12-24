@@ -3,86 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caitlin Clark T-Shirts</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Shirt Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Caitlin Clark Fan T-Shirts</h1>
-    <nav>
-      <a href="#catalog">Shop</a>
-      <a href="checkout.html">Cart</a>
-    </nav>
+    <h1>Welcome to the Shirt Store</h1>
+    <p>Browse and add shirts to your cart!</p>
   </header>
-
   <main>
-    <section id="catalog">
-      <h2>Available T-Shirts</h2>
-      <div class="products">
-        <!-- Product 1 -->
-        <div class="product">
-          <img src="shirt1.jpg" alt="White Caitlin Clark Tee">
-          <h3>White Caitlin Clark Tee</h3>
-          <p>Price: $25</p>
-          <button onclick="addToCart('White Caitlin Clark Tee', 25)">Add to Cart</button>
-        </div>
-        <!-- Product 2 -->
-        <div class="product">
-          <img src="shirt2.jpg" alt="Black Caitlin Clark Tee">
-          <h3>Black Caitlin Clark Tee</h3>
-          <p>Price: $30</p>
-          <button onclick="addToCart('Black Caitlin Clark Tee', 30)">Add to Cart</button>
-        </div>
-        <!-- Product 3 -->
-        <div class="product">
-          <img src="shirt3.jpg" alt="Blue Caitlin Clark Tee">
-          <h3>Blue Caitlin Clark Tee</h3>
-          <p>Price: $28</p>
-          <button onclick="addToCart('Blue Caitlin Clark Tee', 28)">Add to Cart</button>
-        </div>
-        <!-- Product 4 -->
-        <div class="product">
-          <img src="shirt4.jpg" alt="Gray Caitlin Clark Tee">
-          <h3>Gray Caitlin Clark Tee</h3>
-          <p>Price: $27</p>
-          <button onclick="addToCart('Gray Caitlin Clark Tee', 27)">Add to Cart</button>
-        </div>
-        <!-- Product 5 -->
-        <div class="product">
-          <img src="shirt5.jpg" alt="Red Caitlin Clark Tee">
-          <h3>Red Caitlin Clark Tee</h3>
-          <p>Price: $29</p>
-          <button onclick="addToCart('Red Caitlin Clark Tee', 29)">Add to Cart</button>
-        </div>
-        <!-- Product 6 -->
-        <div class="product">
-          <img src="shirt6.jpg" alt="Pink Caitlin Clark Tee">
-          <h3>Pink Caitlin Clark Tee</h3>
-          <p>Price: $26</p>
-          <button onclick="addToCart('Pink Caitlin Clark Tee', 26)">Add to Cart</button>
-        </div>
-        <!-- Product 7 -->
-        <div class="product">
-          <img src="shirt7.jpg" alt="Green Caitlin Clark Tee">
-          <h3>Green Caitlin Clark Tee</h3>
-          <p>Price: $28</p>
-          <button onclick="addToCart('Green Caitlin Clark Tee', 28)">Add to Cart</button>
-        </div>
-        <!-- Product 8 -->
-        <div class="product">
-          <img src="shirt8.jpg" alt="Yellow Caitlin Clark Tee">
-          <h3>Yellow Caitlin Clark Tee</h3>
-          <p>Price: $30</p>
-          <button onclick="addToCart('Yellow Caitlin Clark Tee', 30)">Add to Cart</button>
-        </div>
+    <section id="product-list">
+      <div class="product">
+        <img src="shirt1.jpg" alt="Shirt 1">
+        <h2>Classic White Shirt</h2>
+        <p>$20.00</p>
+        <button onclick="addToCart('Classic White Shirt', 20)">Add to Cart</button>
       </div>
+      <div class="product">
+        <img src="shirt2.jpg" alt="Shirt 2">
+        <h2>Graphic Tee</h2>
+        <p>$25.00</p>
+        <button onclick="addToCart('Graphic Tee', 25)">Add to Cart</button>
+      </div>
+      <!-- Add 6 more shirts following the same format -->
     </section>
+    <button id="checkout-button" onclick="goToCheckout()">Go to Checkout</button>
   </main>
-
-  <footer>
-    <p>&copy; 2024 Caitlin Clark Fan T-Shirts</p>
-  </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
