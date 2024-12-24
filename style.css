@@ -99,6 +99,19 @@ button:hover {
   font-size: 0.9rem;
   font-weight: bold;
 }
+#cart-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#cart-button:hover {
+  background-color: #218838;
+}
 
 .product {
   animation: fadeIn 0.8s ease-in-out;

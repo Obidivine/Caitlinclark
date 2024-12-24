@@ -3,65 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shirt Store</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Caitlin Clark T-Shirts</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Welcome to Caitlin's Shirt Store</h1>
+    <h1>Caitlin Clark Fan T-Shirts</h1>
+     <h1>Stylish Shirts</h1>
+    <button id="cart-button" onclick="goToCheckout()">
+      Cart (<span id="cart-count">0</span>)
+    </button>
   </header>
+  </header>
+
   <main>
-    <div class="products">
-      <div class="product">
+    <section class="shirts-container">
+      <!-- Shirt 1 -->
+      <div class="shirt-card">
         <img src="images/shirt1.jpg" alt="Shirt 1">
-        <h2>Classic White Shirt</h2>
-        <p>$20.00</p>
-        <button onclick="addToCart('Classic White Shirt', 20)">Add to Cart</button>
+        <h2>Classic Design</h2>
+        <p>$25</p>
+        <button onclick="addToCart('Classic Design', 25)">Add to Cart</button>
       </div>
-      <div class="product">
+
+      <!-- Repeat for remaining shirts -->
+      <div class="shirt-card">
         <img src="images/shirt2.jpg" alt="Shirt 2">
-        <h2>Graphic Tee</h2>
-        <p>$25.00</p>
-        <button onclick="addToCart('Graphic Tee', 25)">Add to Cart</button>
+        <h2>Victory Pose</h2>
+        <p>$30</p>
+        <button onclick="addToCart('Victory Pose', 30)">Add to Cart</button>
       </div>
-      <div class="product">
+
+      <div class="shirt-card">
         <img src="images/shirt3.jpg" alt="Shirt 3">
-        <h2>Casual Polo</h2>
-        <p>$30.00</p>
-        <button onclick="addToCart('Casual Polo', 30)">Add to Cart</button>
+        <h2>Golden Legacy</h2>
+        <p>$35</p>
+        <button onclick="addToCart('Golden Legacy', 35)">Add to Cart</button>
       </div>
-      <div class="product">
+
+      <div class="shirt-card">
         <img src="images/shirt4.jpg" alt="Shirt 4">
-        <h2>V-Neck Shirt</h2>
-        <p>$22.00</p>
-        <button onclick="addToCart('V-Neck Shirt', 22)">Add to Cart</button>
+        <h2>All-Star Edition</h2>
+        <p>$40</p>
+        <button onclick="addToCart('All-Star Edition', 40)">Add to Cart</button>
       </div>
-      <div class="product">
+
+      <div class="shirt-card">
         <img src="images/shirt5.jpg" alt="Shirt 5">
-        <h2>Striped Shirt</h2>
-        <p>$28.00</p>
-        <button onclick="addToCart('Striped Shirt', 28)">Add to Cart</button>
+        <h2>Black & Bold</h2>
+        <p>$20</p>
+        <button onclick="addToCart('Black & Bold', 20)">Add to Cart</button>
       </div>
-      <div class="product">
+
+      <div class="shirt-card">
         <img src="images/shirt6.jpg" alt="Shirt 6">
-        <h2>Denim Shirt</h2>
-        <p>$35.00</p>
-        <button onclick="addToCart('Denim Shirt', 35)">Add to Cart</button>
+        <h2>Fan Favorite</h2>
+        <p>$22</p>
+        <button onclick="addToCart('Fan Favorite', 22)">Add to Cart</button>
       </div>
-      <div class="product">
+
+      <div class="shirt-card">
         <img src="images/shirt7.jpg" alt="Shirt 7">
-        <h2>Flannel Shirt</h2>
-        <p>$40.00</p>
-        <button onclick="addToCart('Flannel Shirt', 40)">Add to Cart</button>
+        <h2>Iconic Move</h2>
+        <p>$28</p>
+        <button onclick="addToCart('Iconic Move', 28)">Add to Cart</button>
       </div>
-      <div class="product">
+
+      <div class="shirt-card">
         <img src="images/shirt8.jpg" alt="Shirt 8">
-        <h2>Sports Tee</h2>
-        <p>$18.00</p>
-        <button onclick="addToCart('Sports Tee', 18)">Add to Cart</button>
+        <h2>Limited Edition</h2>
+        <p>$50</p>
+        <button onclick="addToCart('Limited Edition', 50)">Add to Cart</button>
       </div>
-    </div>
+    </section>
   </main>
-  <script src="script.js"></script>
 </body>
 </html>
