@@ -1,73 +1,87 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #f4f4f4;
 }
 
 header {
-  background-color: #4CAF50;
+  background-color: #333;
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1em 0;
 }
 
-main {
-  padding: 2rem;
+header h1 {
+  margin: 0;
 }
 
-#product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+/* Product Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .product {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1rem;
-  text-align: center;
-  width: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
 }
 
 .product img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product h2 {
+  margin: 10px;
+  text-align: center;
+}
+
+.product p {
+  text-align: center;
+  color: #333;
 }
 
 button {
-  background-color: #4CAF50;
-  border: none;
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
   color: white;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
-#checkout-button {
-  margin-top: 2rem;
-  display: block;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#cart-items {
-  margin: 2rem 0;
-}
-
-#cart-list {
-  list-style: none;
-  padding: 0;
-}
-
-#cart-list li {
-  background-color: white;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.product {
+  animation: fadeIn 0.8s ease-in-out;
 }

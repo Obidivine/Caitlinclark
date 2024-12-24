@@ -1,11 +1,9 @@
+// Cart functionality
 let cart = [];
 
-function addToCart(itemName, itemPrice) {
-  cart.push({ name: itemName, price: itemPrice });
-  alert(`${itemName} added to cart!`);
-}
-
-function goToCheckout() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-  window.location.href = "checkout.html";
+function addToCart(productName, productPrice) {
+  const item = { name: productName, price: productPrice };
+  cart.push(item);
+  alert(`${productName} has been added to your cart.`);
+  console.log(cart);
 }
