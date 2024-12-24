@@ -81,6 +81,24 @@ button:hover {
     transform: translateY(0);
   }
 }
+/* Highlight already ordered shirts */
+.shirt-card.ordered {
+  border: 2px solid #28a745;
+  position: relative;
+}
+
+.shirt-card.ordered::after {
+  content: '✔ Ordered';
+  color: white;
+  background-color: #28a745;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 
 .product {
   animation: fadeIn 0.8s ease-in-out;
